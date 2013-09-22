@@ -1,0 +1,73 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>PureLocal</title>
+
+  <meta name="viewport" value="width=device-width, initial-scale=1, maximum-scale=1;" />
+
+
+  <link href='http://fonts.googleapis.com/css?family=Droid+Serif:700|Pacifico' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="/stylesheets/normalize.css" />
+  <link rel="stylesheet" href="/stylesheets/foundation.css" />
+  <link rel="stylesheet" href="/stylesheets/general_enclosed_foundicons.css" />
+  <link rel="stylesheet" href="/stylesheets/app.css" />
+
+  <script type="text/javascript" src="/javascripts/vendor/jquery.js"></script>
+</head>
+<body>
+  <header>
+    <nav class="row">
+      <div class="large-2 columns logo">
+        <a href="/">
+          <img src="/images/PureLocal_logo.png" alt="PureLocal" />
+        </a>
+      </div>
+
+      <div class="large-10 columns actions">
+        <ul class="inline-list right">
+          <li>
+            <form action="" class="hide-for-small">
+              <input type="text" placeholder="Search by company, category, or product" />
+            </form>
+          </li>
+          <li><a href="my-profile" class="small button">My Profile</a></li>
+        </ul>
+      </div>
+    </nav>
+
+  </header>
+
+  <%= yield %>
+
+  <footer>
+    <div class="row">
+      <div class="small-12 large-4 columns text-left">
+        <p>
+          &copy; Copyright 2013 PureLocal
+        </p>
+      </div>
+
+      <div class="small-12 large-4 columns text-right">
+        <p>
+          <a href="http://facebook.com/thepurelocal" target="_blank">[Facebook]</a>
+          <a href="http://twitter.com/thepurelocal" target="_blank">[Twitter]</a>
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <script type="text/javascript">
+    $(function () {
+      $('#learn').click(function (evt) {
+        $("html, body").animate({ scrollTop: $('.extraDetails').offset().top }, 1000);
+
+        evt.preventDefault();
+        return false;
+      });
+    });
+  </script>
+
+</body>
+</html>
+

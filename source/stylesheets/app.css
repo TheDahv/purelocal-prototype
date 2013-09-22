@@ -1,0 +1,160 @@
+@charset "utf-8";
+
+@font-face {
+  font-family: 'Droid Sans';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Droid Serif Bold'), local('DroidSerif-Bold'), url(http://themes.googleusercontent.com/static/fonts/droidsans/v3/EFpQQyG9GqCrobXxL-KRMXbFhgvWbfSbdVg11QabG8w.woff) format('woff');
+}
+@font-face {
+  font-family: 'Pacifico';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Pacifico Regular'), local('Pacifico-Regular'), url(http://themes.googleusercontent.com/static/fonts/pacifico/v4/yunJt0R8tCvMyj_V4xSjaXYhjbSpvc47ee6xR_80Hnw.woff) format('woff');
+}
+
+@font-face {
+  font-family: 'Dense Regular';
+  src: url('/fonts/Dense-Regular.otf');
+}
+
+body, html {
+  height: 100%;
+  min-height: 100%;
+
+}
+
+h1, h2, h3, h4 {
+  font-family: 'Dense Regular', Helvetica, sans-serif;
+  color: #453733;
+  font-weight: 700;
+}
+
+body, p {
+  font-family: Georgia, sans-serif;
+  color: #453733;
+}
+
+header {
+  background-color: white;
+  height: 10%;
+  min-height: 10%;
+  position: relative;
+}
+
+nav {
+  position: relative;
+  height: 100%;
+}
+
+header a img, header .inline-list {
+  height: 4em;
+}
+
+header .logo {
+  position: absolute;
+  top: 50%;
+  margin-top: -2em;
+}
+
+header .actions input{
+  width: 24em;
+}
+header .inline-list {
+  margin-top: 1em;
+}
+
+#main-details {
+  height: 90%;
+  min-height: 90%;
+
+  background: url('/images/clouds.jpg') no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+
+  padding-top: 2em;
+
+  position: relative;
+}
+
+
+#main-details h1 {
+  color: white;
+
+  font-size: 6em;
+}
+
+#main-details form {
+  input, a {
+    line-height: 2em;
+  }
+}
+
+.learnMore {
+  margin-top: 2em;
+
+  font-size: 2em;
+
+}
+.learnMore a {
+  font-style: italic;
+  color: #fff;
+}
+
+.extraDetails {
+  padding-top: 2em;
+  height: 90%;
+  min-height: 90%;
+}
+
+.extraDetails + h1 {
+  padding-top: 2em;
+}
+
+.blurb {
+  margin-bottom: 2em !important;
+}
+
+.blurb .icon {
+  font-size: 6em;
+  color: #54321a;
+  margin-bottom: 0;
+}
+
+.signup {
+  margin-top: 2em;
+}
+
+footer {
+  height: 10%;
+  min-height: 10%;
+
+  font-size: 0.8em;
+  font-style: italic;
+}
+
+@media only screen and (max-width : 480px) {
+  #main-details h1 {
+    font-size: 4em;
+  }
+
+  .extraDetails {
+    height: auto;
+  }
+
+  .learnMore {
+    margin: 0 auto;
+  }
+
+  .blurb h3 {
+    text-align: center;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .reason i {
+    font-size: 4em;
+  }
+}
