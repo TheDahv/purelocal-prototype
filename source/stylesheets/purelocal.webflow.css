@@ -1,0 +1,323 @@
+body {
+  background-color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #333;
+  font-size: 12px;
+  line-height: 20px;
+}
+h1 {
+  margin: 5px 0px;
+  padding-top: 15px;
+  box-shadow: none;
+  color: white;
+  font-size: 55px;
+  line-height: 44px;
+  font-weight: 700;
+  text-shadow: black 0px 0px 8px;
+}
+h2 {
+  margin: 10px 0px;
+  color: white;
+  font-size: 40px;
+  line-height: 36px;
+  font-weight: 700;
+  text-shadow: black 0px 0px 10px;
+}
+h3 {
+  margin: 10px 0px;
+  font-size: 24px;
+  line-height: 30px;
+  font-weight: 700;
+}
+h4 {
+  margin-right: 0px;
+  margin-left: 0px;
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 700;
+}
+h5 {
+  margin-right: 0px;
+  margin-left: 0px;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 700;
+}
+h6 {
+  margin: 10px 0px;
+  font-size: 12px;
+  line-height: 18px;
+  font-weight: 700;
+}
+p {
+  float: none;
+  font-family:'PT Sans', sans-serif;
+  font-size: 16px;
+}
+.button {
+  display: inline-block;
+  margin-bottom: 25px;
+  padding: 9px 21px;
+  background-color: black;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+}
+.button:hover {
+  background-color: #00a2ff;
+}
+.button.action {
+  padding: 17px 28px;
+  background-color: #09f;
+  font-size: 16px;
+}
+.button:hover.action:hover {
+  background-color: black;
+}
+.section {
+  padding-top: 24px;
+  padding-bottom: 24px;
+}
+.section.hero {
+  padding-top: 60px;
+  padding-bottom: 40px;
+  background-color: #f2f2f2;
+  background-image: url(../images/sassafras-hero-1.jpg);
+  background-size: cover;
+}
+.section.bulk-content {
+  background-color: #ccc;
+  background-image: url(../images/bg-texture.png);
+}
+.company {
+  margin-top: 19px;
+  margin-bottom: 19px;
+  padding-top: 16px;
+  padding-left: 100px;
+  background-color: rgba(0, 0, 0, 0);
+  font-family:'Helvetica Neue', Helvetica, Arial, sans-serif;
+  color: black;
+  font-size: 40px;
+  font-weight: 700;
+}
+.nav-link {
+  display: inline-block;
+  padding: 20px 18px;
+  border-left: 1px solid rgba(255, 255, 255, 0.4);
+  background-color: black;
+  color: white;
+  text-decoration: none;
+}
+.nav-link:hover {
+  background-color: #09f;
+}
+.nav-link.last {
+  float: right;
+  border-right: 0px solid rgba(255, 255, 255, 0.4);
+  border-left-width: 0px;
+}
+.nav-link.last.small-button {
+  margin-top: 10px;
+  margin-left: 20px;
+}
+.navigation-column {
+  text-align: right;
+}
+.nav-section {
+  background-color: white;
+}
+.hero-image {
+  width: auto;
+  float: none;
+  border: 0px solid rgba(0, 0, 0, 0);
+  border-radius: 5px;
+  box-shadow: none;
+}
+.footer {
+  border-top: 0px solid rgba(0, 0, 0, 0.22);
+}
+.footer-link {
+  margin-right: 10px;
+  margin-left: 10px;
+  float: left;
+}
+.special-row {
+  border: 1px solid rgba(0, 0, 0, 0.24);
+  border-radius: 5px;
+  background-color: #f2f2f2;
+}
+.email-column {
+  padding-top: 40px;
+  border-style: solid;
+  border-width: 0px;
+  text-align: center;
+}
+.special-column {
+  padding: 10px 15px;
+  border-radius: 3px;
+}
+.center {
+  text-align: center;
+}
+.map {
+  width: 250px;
+  height: 125px;
+  margin-bottom: 5px;
+  border: 1px solid rgba(0, 0, 0, 0.24);
+  border-radius: 3px;
+  background-image: none;
+}
+.content-row {
+  margin: 20px 10px 25px;
+  padding: 14px;
+  border: 1px solid rgba(0, 0, 0, 0.24);
+  border-radius: 5px;
+  background-color: white;
+}
+.icon-image {
+  margin-right: 3px;
+  margin-bottom: 5px;
+  margin-left: 5px;
+  padding-top: 3px;
+  padding-bottom: 3px;
+  float: left;
+}
+.company-details {
+  margin-left: 21px;
+  float: left;
+  font-size: 14px;
+  line-height: 16px;
+}
+.company-location {
+  float: left;
+}
+.company-hours {
+  margin-left: 21px;
+  float: left;
+  font-size: 14px;
+}
+.company-social {
+  margin-right: 5px;
+  margin-left: 5px;
+  float: left;
+}
+.product-image {
+  width: auto;
+  border: 1px solid rgba(0, 0, 0, 0.24);
+  border-radius: 5px;
+}
+.search {
+  display: block;
+  width: 160px;
+  margin-top: 20px;
+  margin-right: auto;
+  margin-left: 9px;
+  float: right;
+}
+.user-image {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left: 25px;
+  float: none;
+  border-radius: 5px;
+}
+.review-text {
+  margin-bottom: 15px;
+  float: none;
+}
+.hero-tagline {
+  margin-top: -10px;
+  padding-top: 0px;
+  padding-right: 70px;
+  padding-bottom: 0px;
+  color: white;
+  font-size: 16px;
+  text-shadow: black 1px 0px 6px;
+}
+.content-heading {
+  margin-bottom: -20px;
+  font-size: 36px;
+  text-shadow: black 1px 0px 6px;
+}
+.connection-heading {
+  margin-top: -20px;
+  padding-left: 16px;
+  color: white;
+  font-size: 20px;
+  line-height: 20px;
+  text-shadow: black 1px 0px 6px;
+}
+.connection-tagline {
+  margin-top: 8px;
+  float: none;
+}
+.connection-location {
+  padding-left: 20px;
+  float: none;
+  font-size: 14px;
+  line-height: 14px;
+  text-shadow: rgba(0, 0, 0, 0.24) 1px 0px 4px;
+}
+.our-logo {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  float: left;
+}
+@media (max-width: 991px) {
+  .hero-column {
+    padding-top: 0px;
+  }
+}
+@media (max-width: 767px) {
+  .button {
+    margin-top: 4px;
+    margin-bottom: 23px;
+  }
+  .section {
+    text-align: center;
+  }
+  .company {
+    text-align: center;
+  }
+  .nav-link {
+    padding-top: 12px;
+    padding-bottom: 12px;
+  }
+  .navigation-column {
+    border-top: 1px solid rgba(255, 255, 255, 0.4);
+    text-align: center;
+  }
+  .footer {
+    text-align: center;
+  }
+  .email-column {
+    padding-top: 0px;
+  }
+}
+@media (max-width: 479px) {
+  .section.hero {
+    background-image: url(../images/Screen%20Shot%202013-09-21%20at%202.42.14%20PM.png);
+    background-repeat: repeat repeat;
+  }
+  .nav-link {
+    display: block;
+    padding-top: 9px;
+    padding-bottom: 9px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+    border-left-width: 0px;
+  }
+  .nav-link.last {
+    border-right-width: 0px;
+  }
+  .navigation-column {
+    padding-right: 0px;
+    padding-left: 0px;
+  }
+  .hero-image {
+    box-shadow: black 0px 0px 0px 0px;
+  }
+  .hero-tagline {
+    padding-right: 0px;
+    text-shadow: black 1px 0px 6px;
+  }
+}
