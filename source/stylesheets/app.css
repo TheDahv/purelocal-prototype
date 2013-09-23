@@ -58,6 +58,7 @@ header .logo {
 }
 
 header .actions input{
+  display: inline-block;
   width: 24em;
 }
 header .inline-list {
