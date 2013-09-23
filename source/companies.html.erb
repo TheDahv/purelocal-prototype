@@ -1,27 +1,28 @@
 <div class="row">
   <div class="large-12 columns">
-    <h1>Results for "Jewelry"</h1>
+    <h1>10 Results for "Jewelry"</h1>
   </div>
   <div class="large-12 columns">
-    <a href="#" class="small button">Filter these results...</a>
+    <a href="#" id="startfilter" class="small button">Filter these results...</a>
 
-    <form action="#" class="custom" style="display: none;">
+    <form action="#" class="custom" style="display: none;" id="filterform">
       <div class="row">
         <div class="large-2 columns">
           <label for="filterby" class="right inline">Filter by:</label>
         </div>
         <div class="large-2 columns">
-          <select id="filter-category" name="filter-category" class="medium">
+          <select id="filterby" name="filter-category" class="medium">
             <option value="category">Category</option>
             <option value="size">Business Size</option>
             <option value="distance">Proximity in miles</option>
           </select>
         </div>
         <div class="large-5 columns">
-          <input type="text" />
+          <input type="text" name="filtervalue" id="filtervalue" />
         </div>
         <div class="large-3 columns">
           <input type="submit" class="small button" value="Apply filter" />
+          <a href="#" class="small button" id="closefilter">Close</a>
         </div>
       </div>
     </form>
@@ -30,6 +31,105 @@
   </div>
 
   <div id="results">
-
   </div>
 </div>
+
+<script type="text/template" id="resultTemplate">
+  <div class="companyResult">
+    <div class="row">
+      <div class="large-3 columns hide-for-small">
+        <img src='http://placekitten.com/g/200/200' />
+      </div>
+      <div class="large-9 small-12 columns">
+        <h3>
+          <a href="/companies/sasafras">
+            {{ data[9] }}
+          </a>
+        </h3>
+        <p class="tagline">{{ tagline }}</p>
+        <p class="address">
+          
+        </p>
+        <ul>
+          <li>Category: {{ data[15] }}</li>
+          <li>Business Size: {{ data[10] }}</li>
+          <li>Location: {{ data[data.length - 1]}}</li>
+        </ul>
+      </div>
+    </div>
+    <div class="row">
+      <div class="small-12 large-9 offset-3 columns">
+      </div>
+    </div>
+  </div>
+</script>
+
+<script type="text/javascript">
+  $(function () {
+    var taglines = "Transform world communities become bringing experiences actionlaunch community program. Talk potential swnext weekend challenge united we ideas years. USA about sign forces all lot see founder. Entrepreneurs all startup supporters thriving all resources talk startup. About unparalleled involved for get my help. Connections startup thing need connected better hiring. Get support joining based with alongside need potential unparalleled. World everything part communities startup global entrepreneurs for actionlaunch. Stay connections website weekend build product today. Largest country entrepreneurial better been startup you weekend.".split('.');
+
+    _.templateSettings = { interpolate: /\{\{(.+?)\}\}/g };
+
+    var template = _.template($('#resultTemplate').html());
+
+    $.getJSON('/businessdata.json')
+      .success(function (data) {
+        data = data.data.slice(0, 10);
+        $('#results').html(
+          _.map(data, function (company) {
+            return template({
+              data: company
+              , tagline: taglines[Math.floor((Math.random()*10))]
+            });
+          }).join('')
+        );
+      });
+
+    // Filters
+    $('#startfilter').click(function (evt) {
+      $('#filterform').show('slow');
+
+      evt.preventDefault();
+      return false;
+    });
+
+    $('#filterform').submit(function (evt) {
+        var form, filterType, filterValue;
+
+        form = $(evt.currentTarget);
+        filterType = form.find('#filterby').val()
+        filterValue = form.find('#filtervalue').val();
+
+        formResults = $(evt.currentTarget).find('input').not('[type=submit]').each(function (i, formEl) {
+          formEl.value = '';
+        });
+
+        var li = $('<li />')
+          .text(filterType + ": " + filterValue + ' ')
+          .append(
+            $('<a />')
+              .text('[x]')
+              .addClass('clearfilter')
+              .click(function (evt) {
+                $(evt.currentTarget).parent().remove();
+                evt.preventDefault();
+                return false;
+              })
+            );
+        $('#appliedFilters').append(li);
+
+        evt.preventDefault();
+        return false;
+    });
+
+    $('#closefilter').click(function (evt) {
+        $('#filterform').find('input').not('[type=submit]').each(function (i, formEl) {
+          formEl.value = '';
+          });
+        $('#filterform').hide('slow');
+
+        evt.preventDefault();
+        return false;
+    });
+  });
+</script>

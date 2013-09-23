@@ -158,3 +158,8 @@ footer {
     font-size: 4em;
   }
 }
+
+/* Company search results */
+.companyResult {
+  margin-bottom: 4em;
+}
