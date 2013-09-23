@@ -163,3 +163,38 @@ footer {
 .companyResult {
   margin-bottom: 4em;
 }
+
+.section.hero {
+  padding-top: 60px;
+  padding-bottom: 40px;
+  background: url('/images/sassafras-hero-1.jpg') no-repeat center center fixed;
+  background-size: cover;
+}
+
+.section.hero h1 {
+  color: white;
+}
+
+.content-heading {
+  font-size: 36px;
+}
+.connection-heading {
+  margin-top: -20px;
+  padding-left: 16px;
+  color: white;
+  font-size: 20px;
+  line-height: 20px;
+  text-shadow: black 1px 0px 6px;
+}
+
+.connection-tagline {
+  margin-top: 8px;
+  float: none;
+}
+
+.connection-location {
+  padding-left: 20px;
+  float:none;
+  font-size: 14px;
+  line-height: 14px;
+}

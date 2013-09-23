@@ -51,7 +51,7 @@ h6 {
 }
 p {
   float: none;
-  font-family:'PT Sans', sans-serif;
+  font-family:Georgia, sans-serif;
   font-size: 16px;
 }
 .button {
@@ -81,9 +81,7 @@ p {
 .section.hero {
   padding-top: 60px;
   padding-bottom: 40px;
-  background-color: #f2f2f2;
-  background-image: url('/images/sassafras-hero-1.jpg');
-  background-size: cover;
+  background: url('/images/sassafras-hero-1.jpg') no-repeat center center fixed;
 }
 .section.bulk-content {
   background-color: #ccc;
